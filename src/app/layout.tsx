@@ -1,4 +1,5 @@
-import './globals.css'
+import { Header } from '@/components/header'
+import '../../styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -15,8 +16,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <>
+      <Header/>
+      <html lang="en">
+        <body className={inter.className}>{children}</body>
+      </html>
+    </>
   )
 }
